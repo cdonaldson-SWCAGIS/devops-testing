@@ -1,0 +1,507 @@
+[
+    {
+        "type": NaN,
+        "name": NaN,
+        "label": NaN,
+        "hint": NaN,
+        "appearance": NaN,
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": NaN,
+        "name": NaN,
+        "label": NaN,
+        "hint": NaN,
+        "appearance": NaN,
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": NaN,
+        "name": NaN,
+        "label": NaN,
+        "hint": NaN,
+        "appearance": NaN,
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "begin group",
+        "name": "g_nest_details",
+        "label": "<table cellpadding=5>\n  <tr>\n    <td valign=\"middle\"><img src=\"plant-2.svg\"  height=\"35\"></td>\n    <td padding=5>\n      Nest Details\n    </td>\n  </tr>\n</table>",
+        "hint": NaN,
+        "appearance": "w12",
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "text",
+        "name": "nest_id",
+        "label": "Nest ID",
+        "hint": NaN,
+        "appearance": "w6",
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "text",
+        "name": "orig_spp_id",
+        "label": "Original Species ID",
+        "hint": NaN,
+        "appearance": "w6",
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "date",
+        "name": "date_collected",
+        "label": "Date Collected",
+        "hint": NaN,
+        "appearance": "w12",
+        "calculation": "now()",
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "select_one obs_select",
+        "name": "obs_select",
+        "label": "Observer",
+        "hint": NaN,
+        "appearance": "w6 minimal",
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": 500.0,
+        "body::esri:style": NaN,
+        "choices": [
+            {
+                "name": "SRN",
+                "label": "Sarah Nichols"
+            },
+            {
+                "name": "JMS",
+                "label": "John Mark Simmons"
+            },
+            {
+                "name": "AH",
+                "label": "Alex Harper"
+            },
+            {
+                "name": "KB",
+                "label": "Kristen Burgess"
+            },
+            {
+                "name": "SJD",
+                "label": "Steve Dougill"
+            },
+            {
+                "name": "JS",
+                "label": "Justin Streit"
+            },
+            {
+                "name": "MS",
+                "label": "Mike Swink"
+            },
+            {
+                "name": "OTHR",
+                "label": "Other Observer"
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "name": "obs_text",
+        "label": "Other Observer",
+        "hint": NaN,
+        "appearance": "w6",
+        "calculation": NaN,
+        "relevant": "${obs_select} = 'OTHR'",
+        "bind::esri:fieldLength": 500.0,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "select_one species_ID",
+        "name": "spp_id",
+        "label": "Current Species ID",
+        "hint": NaN,
+        "appearance": "w6 minimal",
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN,
+        "choices": [
+            {
+                "name": "CORA",
+                "label": "common raven"
+            },
+            {
+                "name": "GHOW",
+                "label": "great-horned owl"
+            },
+            {
+                "name": "GOEA",
+                "label": "golden eagle"
+            },
+            {
+                "name": "RTHA",
+                "label": "red-tailed hawk"
+            },
+            {
+                "name": "PEFA",
+                "label": "peregrine falcon"
+            },
+            {
+                "name": "PRFA",
+                "label": "prairie falcon"
+            },
+            {
+                "name": "unid_Buteo_CORA",
+                "label": "Undetermined, resembles Buteo/CORA"
+            },
+            {
+                "name": "unid_GOEA_Buteo",
+                "label": "Undetermined, resembles GOEA/Buteo"
+            },
+            {
+                "name": "other",
+                "label": "Other Species"
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "name": "spp_id_other",
+        "label": "Other Species ID",
+        "hint": NaN,
+        "appearance": "w6 minimal",
+        "calculation": NaN,
+        "relevant": "${spp_id}='other'",
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "select_one substrate",
+        "name": "substrate",
+        "label": "Nest Substrate",
+        "hint": NaN,
+        "appearance": "w6 minimal",
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN,
+        "choices": [
+            {
+                "name": "cliff",
+                "label": "Cliff"
+            },
+            {
+                "name": "pwrline",
+                "label": "Powerline Tower"
+            },
+            {
+                "name": "tree",
+                "label": "Tree"
+            },
+            {
+                "name": "other",
+                "label": "Other"
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "name": "substrate_other",
+        "label": "Other Nest Substrate",
+        "hint": NaN,
+        "appearance": "w6",
+        "calculation": NaN,
+        "relevant": "${substrate}='other'",
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "end group",
+        "name": NaN,
+        "label": NaN,
+        "hint": NaN,
+        "appearance": NaN,
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "select_multiple contents",
+        "name": "nest_contents",
+        "label": "Contents",
+        "hint": NaN,
+        "appearance": "w1 compact-2",
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN,
+        "choices": [
+            {
+                "name": "Adult",
+                "label": "Adult"
+            },
+            {
+                "name": "Eggs",
+                "label": "Eggs"
+            },
+            {
+                "name": "Nestlings",
+                "label": "Nestlings"
+            },
+            {
+                "name": "Greenery",
+                "label": "Greenery"
+            },
+            {
+                "name": "Sticks_good",
+                "label": "Sticks-Intact/Good"
+            },
+            {
+                "name": "Sticks_bad",
+                "label": "Sticks-Deteriorating/Bad"
+            }
+        ]
+    },
+    {
+        "type": "begin group",
+        "name": "g_nest_contents",
+        "label": "<table cellpadding=5>\n  <tr>\n    <td valign=\"middle\"><img src=\"box-margin.svg\"  height=\"35\"></td>\n    <td padding=5> Nest Content Details\n    </td>\n  </tr>\n</table>",
+        "hint": NaN,
+        "appearance": "w12",
+        "calculation": NaN,
+        "relevant": "${nest_contents}!=''",
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": "layout=dynamic-grid"
+    },
+    {
+        "type": "integer",
+        "name": "eggs_count",
+        "label": "# Eggs",
+        "hint": NaN,
+        "appearance": "w6 spinner",
+        "calculation": NaN,
+        "relevant": "selected(${nest_contents},'Eggs')",
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "integer",
+        "name": "nestlings_count",
+        "label": "# Nestlings",
+        "hint": NaN,
+        "appearance": "w6 spinner",
+        "calculation": NaN,
+        "relevant": "selected(${nest_contents},'Nestlings')",
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "text",
+        "name": "nestlings_age",
+        "label": "Nestling Age",
+        "hint": NaN,
+        "appearance": "w12",
+        "calculation": NaN,
+        "relevant": "selected(${nest_contents},'Nestlings')",
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "select_one yes_no",
+        "name": "adults_pre",
+        "label": "Adults Present within 500 m?",
+        "hint": NaN,
+        "appearance": "w12 horizontal",
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN,
+        "choices": [
+            {
+                "name": "yes",
+                "label": "Yes"
+            },
+            {
+                "name": "no",
+                "label": "No"
+            }
+        ]
+    },
+    {
+        "type": "select_one yes_no",
+        "name": "spp_pre_other_yn",
+        "label": "Other Species Present within 500 m?",
+        "hint": NaN,
+        "appearance": "w6 horizontal",
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN,
+        "choices": [
+            {
+                "name": "yes",
+                "label": "Yes"
+            },
+            {
+                "name": "no",
+                "label": "No"
+            }
+        ]
+    },
+    {
+        "type": "select_one species_ID",
+        "name": "spp_pre_other",
+        "label": "Other Species ID",
+        "hint": NaN,
+        "appearance": "w6 minimal",
+        "calculation": NaN,
+        "relevant": "${spp_pre_other_yn}='yes'",
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN,
+        "choices": [
+            {
+                "name": "CORA",
+                "label": "common raven"
+            },
+            {
+                "name": "GHOW",
+                "label": "great-horned owl"
+            },
+            {
+                "name": "GOEA",
+                "label": "golden eagle"
+            },
+            {
+                "name": "RTHA",
+                "label": "red-tailed hawk"
+            },
+            {
+                "name": "PEFA",
+                "label": "peregrine falcon"
+            },
+            {
+                "name": "PRFA",
+                "label": "prairie falcon"
+            },
+            {
+                "name": "unid_Buteo_CORA",
+                "label": "Undetermined, resembles Buteo/CORA"
+            },
+            {
+                "name": "unid_GOEA_Buteo",
+                "label": "Undetermined, resembles GOEA/Buteo"
+            },
+            {
+                "name": "other",
+                "label": "Other Species"
+            }
+        ]
+    },
+    {
+        "type": "select_one beh",
+        "name": "behavior",
+        "label": "Behavior",
+        "hint": NaN,
+        "appearance": "w12 compact-2",
+        "calculation": NaN,
+        "relevant": "${adults_pre}!=''",
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN,
+        "choices": [
+            {
+                "name": "flushed",
+                "label": "flushed"
+            },
+            {
+                "name": "soaring",
+                "label": "soaring"
+            },
+            {
+                "name": "court_flight",
+                "label": "courtship flight"
+            },
+            {
+                "name": "perched",
+                "label": "perched"
+            },
+            {
+                "name": "inc_brood",
+                "label": "adult in incub./brooding posture"
+            },
+            {
+                "name": "carry_food_nestmat",
+                "label": "adult carrying food/material"
+            },
+            {
+                "name": "feeding_nestling",
+                "label": "adult feeding nestling(s)"
+            },
+            {
+                "name": "other",
+                "label": "other"
+            }
+        ]
+    },
+    {
+        "type": "text",
+        "name": "behavior_other",
+        "label": "Other Behavior",
+        "hint": NaN,
+        "appearance": "w12",
+        "calculation": NaN,
+        "relevant": "selected(${behavior},'other')",
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "end group",
+        "name": NaN,
+        "label": NaN,
+        "hint": NaN,
+        "appearance": NaN,
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": NaN,
+        "name": NaN,
+        "label": NaN,
+        "hint": NaN,
+        "appearance": NaN,
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": NaN,
+        "body::esri:style": NaN
+    },
+    {
+        "type": "text",
+        "name": "comments",
+        "label": "Comments",
+        "hint": "Photo ID, include general description of nest placement e.g., 2/3rds up on cliff, tree species, detail adult behaviors - and discern between sexes if known",
+        "appearance": "w1",
+        "calculation": NaN,
+        "relevant": NaN,
+        "bind::esri:fieldLength": 5000.0,
+        "body::esri:style": NaN
+    }
+]
